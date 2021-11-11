@@ -39,7 +39,7 @@ endif()
 cmake_minimum_required(VERSION 3.5)
 cmake_policy(SET CMP0048 NEW)
 project(gmock VERSION ${GOOGLETEST_VERSION} LANGUAGES CXX C)
-
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11")
 if (COMMAND set_up_hermetic_build)
   set_up_hermetic_build()
 endif()
