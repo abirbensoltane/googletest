@@ -49,7 +49,7 @@ endif()
 cmake_minimum_required(VERSION 3.5)
 cmake_policy(SET CMP0048 NEW)
 project(gtest VERSION ${GOOGLETEST_VERSION} LANGUAGES CXX C)
-
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11")
 if (POLICY CMP0063) # Visibility
   cmake_policy(SET CMP0063 NEW)
 endif (POLICY CMP0063)
